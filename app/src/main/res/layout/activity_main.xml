@@ -211,7 +211,42 @@
                 android:paddingTop="8sp"/>
 
         </LinearLayout>
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:id="@+id/menu6"
+            android:layout_width="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="8dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:orientation="horizontal"
+            android:background="#AAFF213F">
 
+            <ImageView
+                android:src="@drawable/menu6"
+                android:scaleType="center"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleX ="1"
+                android:scaleY ="1"
+                android:adjustViewBounds="true"
+                />
+
+            <TextView
+                android:id="@+id/menu6_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:keepScreenOn="true"
+                android:text="@string/menu6"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:paddingTop="8sp"/>
+
+        </LinearLayout>
 
     <!-- This FrameLayout insets its children based on system windows using
          android:fitsSystemWindows.

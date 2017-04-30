@@ -36,6 +36,7 @@ public class Pop extends Activity {
         if (MainActivity.menu == 0) {
             v_popup_label = getResources().getString(R.string.menu0);
             v_popup_menu_text = getResources().getString(R.string.popup_menu_text0);
+
         }
 
         if (MainActivity.menu == 1) {

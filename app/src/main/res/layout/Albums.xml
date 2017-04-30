@@ -52,10 +52,10 @@
                             android:layout_height="wrap_content"
                             android:keepScreenOn="true"
                             android:padding="8dp"
-                            android:text="@string/menu2"
                             android:textColor="#FFFFFF"
-                            android:textStyle="bold"
-                            android:textSize="15sp"/>
+                            android:text="@string/menu2"
+                            android:textSize="14sp"
+                            android:onClick="ScrollMenu"/>
 
                         <TextView
                             android:id="@+id/scroll_menu3"
@@ -65,8 +65,8 @@
                             android:padding="8dp"
                             android:text="@string/menu3"
                             android:textColor="#FFFFFF"
-                            android:textSize="14sp"
-                            android:onClick="ScrollMenu"/>
+                            android:textStyle="bold"
+                            android:textSize="15sp"/>
 
                         <TextView
                             android:id="@+id/scroll_menu4"

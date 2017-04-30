@@ -9,6 +9,10 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationSet;
+import android.view.animation.AnimationUtils;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.TextView;
@@ -28,7 +32,7 @@ public class NowPlaying extends AppCompatActivity  {
         Log.v("NowPlaying", "click");
         MainActivity.menu = 1;
         setContentView(R.layout.nowplaying);
-        startActivity(new Intent(NowPlaying.this, Pop.class));
+       // startActivity(new Intent(NowPlaying.this, Pop.class));
    }
 
     @Override
@@ -50,6 +54,8 @@ public class NowPlaying extends AppCompatActivity  {
         menu4_textview.setTextColor(Color.parseColor("#FFFFFF"));
         menu5_textview.setTextColor(Color.parseColor("#FFFFFF"));
         menu6_textview.setTextColor(Color.parseColor("#FFFFFF"));
+
+        MainActivity.menu = 1;
     }
 
     public void ScrollMenu(View v) {
@@ -63,6 +69,13 @@ public class NowPlaying extends AppCompatActivity  {
         TextView menu6_textview = (TextView) findViewById(R.id.scroll_menu6);
         // each click starts the proper intent
         switch (v.getId()) {
+            case R.id.scroll_menu0:
+                Log.v("NowPlaying", "click 0");
+                menu1_textview.setTextColor(Color.parseColor("#66000000"));
+                MonyMusic = new Intent(this, MainActivity.class);
+                startActivity(MonyMusic);
+                menu1_textview.setTextColor(Color.parseColor("#000000"));
+                break;
             case R.id.scroll_menu1:
                 Log.v("NowPlaying", "click 1");
                 menu1_textview.setTextColor(Color.parseColor("#66000000"));
@@ -105,9 +118,8 @@ public class NowPlaying extends AppCompatActivity  {
                 break;
         }
 
-
-
     }
+
 
 
 

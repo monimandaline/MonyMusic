@@ -25,6 +25,17 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/scroll_menu0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:keepScreenOn="true"
+                    android:padding="8dp"
+                    android:text="@string/menuhome"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:onClick="ScrollMenu"/>
 
                 <TextView
                     android:id="@+id/scroll_menu1"
@@ -222,4 +233,6 @@
             android:scaleType="center"
             android:src="@drawable/btn_frw" />
     </LinearLayout>
+
+
 </RelativeLayout>

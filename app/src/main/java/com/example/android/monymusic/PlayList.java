@@ -51,14 +51,14 @@ public class PlayList extends AppCompatActivity {
 
         ArrayList<String> words = new ArrayList<String>();
 
-        words.add("Latin Pop Mix");
-        words.add("Cyberpunk - Art Remixes");
-        words.add("Vivaldi Best of Seasons");
-        words.add("Startrek Voyager - Themes");
-        words.add("Ambient");
-        words.add("Motivating MusicMix");
-        words.add("Enrique Iglesias Best Dance");
-        words.add("Random Cool Song List 2016 - 2017");
+        words.add("Latin Pop Mix\n" + "14 Songs");
+        words.add("Cyberpunk - Art Remixes\n" + "10 Songs");
+        words.add("Vivaldi Best of Seasons\n" + "4 Songs");
+        words.add("Startrek Voyager - Themes\n"+ "7 Songs");
+        words.add("Ambient" + "9 Songs\n" + "23 Songs");
+        words.add("Motivating MusicMix\n" + "32 Songs");
+        words.add("Enrique Iglesias Best Dance\n" + "48 Songs");
+        words.add("Random Cool Song List 2016 - 2017\n" + "17 Songs");
 
         final ListView lv = (ListView) findViewById(listview);
 
@@ -84,14 +84,13 @@ public class PlayList extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 HashMap<String, String> map = (HashMap<String, String>) lv.getItemAtPosition(position);
-                Toast.makeText(PlayList.this, "Ohhoho, your list is on the road..." + position, Toast.LENGTH_SHORT).show();
+                Toast.makeText(PlayList.this, "Ohhoho, your list is on the road..." + (position+1), Toast.LENGTH_SHORT).show();
             }
 
         });
 //EditText user_name_et = (EditText) findViewById(R.id.user_name);
         //user_name = user_name_et.getText().toString();
 
-        startActivity(new Intent(PlayList.this, Pop.class));
     }
 
     public void onResume() {
@@ -110,6 +109,8 @@ public class PlayList extends AppCompatActivity {
         menu4_textview.setTextColor(Color.parseColor("#FFFFFF"));
         menu5_textview.setTextColor(Color.parseColor("#FFFFFF"));
         menu6_textview.setTextColor(Color.parseColor("#FFFFFF"));
+
+        MainActivity.menu = 2;
     }
 
     public void ScrollMenu(View v) {
@@ -123,6 +124,13 @@ public class PlayList extends AppCompatActivity {
         TextView menu6_textview = (TextView) findViewById(R.id.scroll_menu6);
         // each click starts the proper intent
         switch (v.getId()) {
+            case R.id.scroll_menu0:
+                Log.v("NowPlaying", "click 0");
+                menu1_textview.setTextColor(Color.parseColor("#66000000"));
+                MonyMusic = new Intent(this, MainActivity.class);
+                startActivity(MonyMusic);
+                menu1_textview.setTextColor(Color.parseColor("#000000"));
+                break;
             case R.id.scroll_menu1:
                 Log.v("NowPlaying", "click 1");
                 menu1_textview.setTextColor(Color.parseColor("#66000000"));
@@ -179,7 +187,8 @@ public class PlayList extends AppCompatActivity {
 
     }
 
-    //** Submit and Reset button animations
+
+    //** Button animations
     public void ButtonAnimation(View v) {
 
         final Animation animTranslate = AnimationUtils.loadAnimation(this, R.anim.anim_translate);

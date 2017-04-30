@@ -12,6 +12,10 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.view.animation.Animation;
+import android.view.animation.AnimationSet;
+import android.view.animation.AnimationUtils;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -31,7 +35,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         setContentView(R.layout.activity_main);
 
-        startActivity(new Intent(MainActivity.this, Pop.class));
+        //startActivity(new Intent(MainActivity.this, Pop.class));
 
         final Typeface typeface=Typeface.createFromAsset(getAssets(),"fonts/Montserrat-Regular.ttf");
 
@@ -56,12 +60,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         TextView menu5_textview = (TextView) findViewById(R.id.menu5_textview);
         menu5_textview.setTypeface(typeface);
 
+        LinearLayout menu6 = (LinearLayout) findViewById(R.id.menu6);
+        TextView menu6_textview = (TextView) findViewById(R.id.menu6_textview);
+        menu6_textview.setTypeface(typeface);
+
         menu1.setOnClickListener(this);
         menu2.setOnClickListener(this);
         menu3.setOnClickListener(this);
         menu4.setOnClickListener(this);
         menu5.setOnClickListener(this);
-
+        menu6.setOnClickListener(this);
     }
 
     @Override
@@ -92,9 +100,35 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 MonyMusic = new Intent(this, Artist.class);
                 startActivity(MonyMusic);
                 break;
+            case R.id.menu6:
+                startActivity(new Intent(MainActivity.this, Pop.class));
+                break;
             default:
                 break;
         }
+    }
+
+    public void onResume() {
+
+        super.onResume();
+        MainActivity.menu = 0;
+    }
+
+
+    //** Button animations
+    public void ButtonAnimation(View v) {
+
+        final Animation animTranslate = AnimationUtils.loadAnimation(this, R.anim.anim_translate);
+        final Animation animAlpha = AnimationUtils.loadAnimation(this, R.anim.anim_alpha);
+        final Animation animScale = AnimationUtils.loadAnimation(this, R.anim.anim_scale);
+        final Animation animRotate = AnimationUtils.loadAnimation(this, R.anim.anim_rotate);
+
+        AnimationSet sets = new AnimationSet(false);
+        //sets.addAnimation(animTranslate);
+        //sets.addAnimation(animAlpha);
+        sets.addAnimation(animRotate);
+        //sets.addAnimation(animScale);
+        v.startAnimation(sets);
     }
 
 }

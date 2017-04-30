@@ -2,6 +2,7 @@
     <string name="app_name">MonyMusic</string>
 
     <string name="dummy_button">Dummy Button</string>
+    <string name="menuhome">Home</string>
     <string name="menu0">Main Menu</string>
     <string name="menu1">Now Playing</string>
     <string name="menu2">Play List</string>
@@ -14,9 +15,9 @@
     <string name="popup_menu_text0">0. This is the Main Menu. On this page, the user will be able to click a button of their choice upon which an explicit intent is triggered to the correct screen.\n\nThe user will be able to navigate from one screen to another on scrollable page menu, not just from Main Menu.</string>
     <string name="popup_menu_text1">1. When the user clicks on Now Playing button in the Main Menu, the activity will open via an explicit intent and the song will start playing. \n\nThe artist name, image, and song title will change automatically, and the media player will be at the bottom of the screen.</string>
     <string name="popup_menu_text2">2. When you open the app list with all your playlist appears below. If you don\'t have any play list, a message will appear telling you to add songs by tapping the fab + button. when you do so, a new activity opens to add songs. In this new activity you can scan your device for media files, or you can visit various online music stores to by new songs.</string>
-    <string name="popup_menu_text3">2. When you open the app list with all your songs appears below. If you don\'t have any play list, a message will appear telling you to add songs by tapping the fab + button. when you do so, a new activity opens to add songs. In this new activity you can scan your device for media files, or you can visit various online music stores to by new songs.</string>
-    <string name="popup_menu_text4">2. When you open the app list with all your songs appears below. If you don\'t have any play list, a message will appear telling you to add songs by tapping the fab + button. when you do so, a new activity opens to add songs. In this new activity you can scan your device for media files, or you can visit various online music stores to by new songs.</string>
-    <string name="popup_menu_text5">4. When you open the app list with all your songs appears below. If you don\'t have any songs, a message will appear telling you to add songs by tapping the fab + button. when you do so, a new activity opens to add songs. In this new activity you can scan your device for media files, or you can visit various online music stores to by new songs.</string>
+    <string name="popup_menu_text3">3. When you open the app list with all your songs appears below. If you don\'t have any play list, a message will appear telling you to add songs by tapping the fab + button. when you do so, a new activity opens to add songs. In this new activity you can scan your device for media files, or you can visit various online music stores to by new songs.</string>
+    <string name="popup_menu_text4">4. When you open the app list with all your songs appears below. If you don\'t have any play list, a message will appear telling you to add songs by tapping the fab + button. when you do so, a new activity opens to add songs. In this new activity you can scan your device for media files, or you can visit various online music stores to by new songs.</string>
+    <string name="popup_menu_text5">5. When you open the app list with all your songs appears below. If you don\'t have any songs, a message will appear telling you to add songs by tapping the fab + button. when you do so, a new activity opens to add songs. In this new activity you can scan your device for media files, or you can visit various online music stores to by new songs.</string>
 
     <string name="playlistheader1">Id</string>
     <string name="playlistheader2">List name</string>
