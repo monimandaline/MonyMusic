@@ -4,7 +4,10 @@
     android:orientation="vertical"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
-    android:background="@drawable/monymusicback">
+    android:background="@color/colorPrimaryDark">
+
+        <ImageView style="@style/guitar_background" />
+
 
 <LinearLayout
     android:orientation="vertical"
@@ -12,12 +15,7 @@
     android:layout_width="fill_parent">
 
         <HorizontalScrollView
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="left"
-            android:nestedScrollingEnabled="true"
-            android:orientation="horizontal"
-            android:background="#AAFDFED6">
+            style="@style/horizontal_menu">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -25,112 +23,61 @@
                     android:orientation="horizontal">
                         <TextView
                             android:id="@+id/scroll_menu0"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:gravity="left"
-                            android:keepScreenOn="true"
-                            android:padding="8dp"
+                            style="@style/horizontal_menu_item"
                             android:text="@string/menuhome"
-                            android:textColor="#FFFFFF"
-                            android:textSize="14sp"
                             android:onClick="ScrollMenu"/>
                         <TextView
                             android:id="@+id/scroll_menu1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:gravity="left"
-                            android:keepScreenOn="true"
-                            android:padding="8dp"
+                            style="@style/horizontal_menu_item"
                             android:text="@string/menu1"
-                            android:textColor="#FFFFFF"
-                            android:textSize="14sp"
                             android:onClick="ScrollMenu"/>
 
                         <TextView
                             android:id="@+id/scroll_menu2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:keepScreenOn="true"
-                            android:padding="8dp"
-                            android:textColor="#FFFFFF"
+                            style="@style/horizontal_menu_item"
                             android:text="@string/menu2"
-                            android:textSize="14sp"
                             android:onClick="ScrollMenu"/>
 
                         <TextView
                             android:id="@+id/scroll_menu3"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:keepScreenOn="true"
-                            android:padding="8dp"
+                            style="@style/horizontal_menu_item"
                             android:text="@string/menu3"
-                            android:textColor="#FFFFFF"
-                            android:textStyle="bold"
-                            android:textSize="15sp"/>
+                            android:onClick="ScrollMenu"/>
 
                         <TextView
                             android:id="@+id/scroll_menu4"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:keepScreenOn="true"
-                            android:padding="8dp"
+                            style="@style/horizontal_menu_item"
                             android:text="@string/menu4"
-                            android:textColor="#FFFFFF"
-                            android:textSize="14sp"
                             android:onClick="ScrollMenu"/>
 
                         <TextView
                             android:id="@+id/scroll_menu5"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:keepScreenOn="true"
-                            android:padding="8dp"
+                            style="@style/horizontal_menu_item"
                             android:text="@string/menu5"
-                            android:textColor="#FFFFFF"
-                            android:textSize="14sp"
                             android:onClick="ScrollMenu"/>
                         <TextView
                             android:id="@+id/scroll_menu6"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:keepScreenOn="true"
-                            android:padding="8dp"
+                            style="@style/horizontal_menu_item"
                             android:text="@string/menu6"
-                            android:textColor="#FFFFFF"
-                            android:textSize="14sp"
                             android:onClick="ScrollMenu"/>
                 </LinearLayout>
         </HorizontalScrollView>
 
         <!-- Header -->
         <LinearLayout android:id="@+id/header"
-            android:background="#AAFDE756"
             android:layout_height="wrap_content"
             android:layout_width="fill_parent"
             >
                 <TextView android:id="@+id/item1"
-                    android:layout_height="fill_parent"
-                    android:layout_width="wrap_content"
-                    android:width="50dip"
-                    android:height="30dip"
-                    android:gravity="center"
+                    style="@style/header_item_1"
                     android:text="@string/playlistheader1"
                     />
                 <TextView android:id="@+id/item2"
-                    android:layout_height="fill_parent"
-                    android:layout_width="wrap_content"
-                    android:text="@string/playlistheader2"
-                    android:gravity="center_vertical"
-                    android:width="100dip"
-                    android:height="30dip"
+                    android:text="@string/albumslistheader2"
+                    style="@style/header_item_2"
                     />
 
         </LinearLayout>
-
-        <!-- List Divider -->
-        <View android:layout_width="fill_parent"
-            android:layout_height="1dip"
-            android:background="#000000" />
 
         <!-- ListView (grid_items) -->
         <LinearLayout android:id="@+id/layout"
@@ -147,10 +94,6 @@
         <Button
             style="@style/button_add"
             android:text="+"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentRight="true"
-            android:background="@drawable/roundedbutton"
-            android:gravity="center"
             android:id="@+id/button_add"
             android:onClick="addList"/>
 

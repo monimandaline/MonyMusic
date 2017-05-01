@@ -1,22 +1,15 @@
 package com.example.android.monymusic;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.graphics.Color;
 import android.graphics.Typeface;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.os.Handler;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationSet;
 import android.view.animation.AnimationUtils;
-import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -87,9 +80,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.menu3:
                 MonyMusic = new Intent(this, Albums.class);
-                //MonyMusic.putExtra("track", "*random*");
-               // MonyMusic.putExtra("mood", "*random*");
-               // MonyMusic.putExtra("rating", 0);
                 startActivity(MonyMusic);
                 break;
             case R.id.menu4:
@@ -97,7 +87,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(MonyMusic);
                 break;
             case R.id.menu5:
-                MonyMusic = new Intent(this, Artist.class);
+                MonyMusic = new Intent(this, Artists.class);
                 startActivity(MonyMusic);
                 break;
             case R.id.menu6:

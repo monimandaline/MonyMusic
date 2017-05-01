@@ -55,7 +55,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Artist"
+            android:name=".Artists"
             android:label="@string/menu5">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

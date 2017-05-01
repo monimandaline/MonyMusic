@@ -3,9 +3,16 @@
     <dimen name="activity_horizontal_margin">0dp</dimen>
     <dimen name="activity_vertical_margin">0dp</dimen>
     <dimen name="activity_text_size">20sp</dimen>
+    <dimen name="activity_text_size_normal">16sp</dimen>
+    <dimen name="activity_text_size_mini">14sp</dimen>
+    <dimen name="pad_mini">8dp</dimen>
+    <dimen name="pad_normal">16dp</dimen>
+    <dimen name="pad_big">20dp</dimen>
+    <dimen name="margin_mini">8dp</dimen>
+    <dimen name="margin_normal">16dp</dimen>
+
     <dimen name="activity_text_pad">8dp</dimen>
     <dimen name="header_text_size">20sp</dimen>
-    <dimen name="header_pad_top">8dp</dimen>
     <dimen name="header_pad_bottom">8dp</dimen>
     <dimen name="header_pad_left">16dp</dimen>
     <dimen name="header_pad_right">16dp</dimen>

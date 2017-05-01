@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#AAFD535A"
+        android:nestedScrollingEnabled="true">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <HorizontalScrollView style="@style/horizontal_menu">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/scroll_menu0"
+                        style="@style/horizontal_menu_item"
+                        android:onClick="ScrollMenu"
+                        android:text="@string/menuhome" />
+
+                    <TextView
+                        android:id="@+id/scroll_menu1"
+                        style="@style/horizontal_menu_item"
+                        android:onClick="ScrollMenu"
+                        android:text="@string/menu1" />
+
+                    <TextView
+                        android:id="@+id/scroll_menu2"
+                        style="@style/horizontal_menu_item"
+                        android:onClick="ScrollMenu"
+                        android:text="@string/menu2" />
+
+                    <TextView
+                        android:id="@+id/scroll_menu3"
+                        style="@style/horizontal_menu_item"
+                        android:onClick="ScrollMenu"
+                        android:text="@string/menu3" />
+
+                    <TextView
+                        android:id="@+id/scroll_menu4"
+                        style="@style/horizontal_menu_item"
+                        android:onClick="ScrollMenu"
+                        android:text="@string/menu4" />
+
+                    <TextView
+                        android:id="@+id/scroll_menu5"
+                        style="@style/horizontal_menu_item"
+                        android:onClick="ScrollMenu"
+                        android:text="@string/menu5" />
+
+                    <TextView
+                        android:id="@+id/scroll_menu6"
+                        style="@style/horizontal_menu_item"
+                        android:onClick="ScrollMenu"
+                        android:text="@string/menu6" />
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <!-- Artist -->
+            <TextView
+                style="@style/artist_name"
+                android:text="Alvaro Soler" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    style="@style/artist_pic"
+                    android:src="@drawable/artist_alvaro_soler" />
+
+                <TextView
+                    style="@style/artist_details"
+                    android:text="@string/artist2_text" />
+            </LinearLayout>
+
+            <!-- Artist -->
+            <TextView
+                style="@style/artist_name"
+                android:text="Enrique Iglesias" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    style="@style/artist_pic"
+                    android:src="@drawable/artist_enrique_iglesias" />
+
+                <TextView
+                    style="@style/artist_details"
+                    android:text="@string/artist1_text" />
+            </LinearLayout>
+
+            <!-- Artist -->
+            <TextView
+                style="@style/artist_name"
+                android:text="Wisin - Juan Luis Morera Luna" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    style="@style/artist_pic"
+                    android:src="@drawable/artist_wisin" />
+
+                <TextView
+                    style="@style/artist_details"
+                    android:text="@string/artist3_text" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

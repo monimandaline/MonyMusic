@@ -7,23 +7,7 @@
     android:descendantFocusability="blocksDescendants"
     >
     <TextView android:id="@+id/item1"
-        android:text="row_id"
-        android:layout_height="fill_parent"
-        android:layout_width="wrap_content"
-        android:textSize="16sp"
-        android:width="50dip"
-        android:textColor="#FFFFFF"
-        android:background="#AAF9648D"
-        android:padding="16dp"
-        />
+        style="@style/list_item_1"/>
     <TextView android:id="@+id/item2"
-        android:text="col_1"
-        android:layout_height="fill_parent"
-        android:layout_width="wrap_content"
-        android:width="1200dip"
-        android:textSize="16sp"
-        android:textColor="#FFFFFF"
-        android:background="#AAF58B69"
-        android:padding="16dp"
-        />
+        style="@style/list_item_2"/>
 </LinearLayout>

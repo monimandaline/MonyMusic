@@ -4,9 +4,7 @@ package com.example.android.monymusic;
  * Created by Csontos Mónika on 2017. 04. 29..
  */
 
-import android.app.Activity;
 import android.content.Intent;
-import android.database.Cursor;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -17,38 +15,31 @@ import android.view.animation.AnimationSet;
 import android.view.animation.AnimationUtils;
 import android.widget.AdapterView;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
-
-import java.sql.RowId;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-import android.app.Activity;
-import android.os.Bundle;
-import android.widget.ListView;
-import android.widget.SimpleAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import static android.os.Build.ID;
 import static com.example.android.monymusic.R.id.listview;
 
 public class Albums extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         Log.v("Albums", "click");
+        // Global variable for Help popup window, where you can find a description for actual screen
+        // The menu number allows for Pop.java code to select the correct text
         MainActivity.menu = 3;
 
         setContentView(R.layout.albums);
 
+        // This array contains data for Listview
         ArrayList<String> words = new ArrayList<String>();
 
         words.add("Latin Pop Mix\n" + "14 Songs\n" + "Fantastic latin pop musics from Spain");
@@ -88,14 +79,11 @@ public class Albums extends AppCompatActivity {
             }
 
         });
-//EditText user_name_et = (EditText) findViewById(R.id.user_name);
-        //user_name = user_name_et.getText().toString();
-
-        //startActivity(new Intent(Albums.this, Pop.class));
     }
 
     public void onResume() {
 
+        //This code handles the local menu on the top of screen
         super.onResume();
         TextView menu1_textview = (TextView) findViewById(R.id.scroll_menu1);
         TextView menu2_textview = (TextView) findViewById(R.id.scroll_menu2);
@@ -110,12 +98,13 @@ public class Albums extends AppCompatActivity {
         menu4_textview.setTextColor(Color.parseColor("#FFFFFF"));
         menu5_textview.setTextColor(Color.parseColor("#FFFFFF"));
         menu6_textview.setTextColor(Color.parseColor("#FFFFFF"));
-
+        // Global variable for Help popup window, where you can find a description for actual screen
+        // The menu number allows for Pop.java code to select the correct text
         MainActivity.menu = 3;
     }
 
     public void ScrollMenu(View v) {
-
+        //This code manages the local menu on top of the screen
         Intent MonyMusic;
         TextView menu1_textview = (TextView) findViewById(R.id.scroll_menu1);
         TextView menu2_textview = (TextView) findViewById(R.id.scroll_menu2);
@@ -163,7 +152,7 @@ public class Albums extends AppCompatActivity {
             case R.id.scroll_menu5:
                 Log.v("NowPlaying", "click 5");
                 menu5_textview.setTextColor(Color.parseColor("#66000000"));
-                MonyMusic = new Intent(this, Artist.class);
+                MonyMusic = new Intent(this, Artists.class);
                 startActivity(MonyMusic);
                 menu5_textview.setTextColor(Color.parseColor("#000000"));
                 break;
@@ -176,7 +165,7 @@ public class Albums extends AppCompatActivity {
     }
 
     public void addList(View v) {
-
+        // This code works, when the user push the add button
         Button addButton = (Button) findViewById(R.id.button_add);
         addButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -189,19 +178,13 @@ public class Albums extends AppCompatActivity {
     }
 
 
-    //** Submit and Reset button animations
+    // Button animations
     public void ButtonAnimation(View v) {
 
-        final Animation animTranslate = AnimationUtils.loadAnimation(this, R.anim.anim_translate);
-        final Animation animAlpha = AnimationUtils.loadAnimation(this, R.anim.anim_alpha);
-        final Animation animScale = AnimationUtils.loadAnimation(this, R.anim.anim_scale);
         final Animation animRotate = AnimationUtils.loadAnimation(this, R.anim.anim_rotate);
 
         AnimationSet sets = new AnimationSet(false);
-        //sets.addAnimation(animTranslate);
-        //sets.addAnimation(animAlpha);
         sets.addAnimation(animRotate);
-        //sets.addAnimation(animScale);
         v.startAnimation(sets);
     }
 }

@@ -8,18 +8,24 @@
     <string name="menu2">Play List</string>
     <string name="menu3">Albums</string>
     <string name="menu4">Songs</string>
-    <string name="menu5">Artist</string>
+    <string name="menu5">Artists</string>
     <string name="menu6">Help</string>
     <string name="close">Close</string>
 
-    <string name="popup_menu_text0">0. This is the Main Menu. On this page, the user will be able to click a button of their choice upon which an explicit intent is triggered to the correct screen.\n\nThe user will be able to navigate from one screen to another on scrollable page menu, not just from Main Menu.</string>
-    <string name="popup_menu_text1">1. When the user clicks on Now Playing button in the Main Menu, the activity will open via an explicit intent and the song will start playing. \n\nThe artist name, image, and song title will change automatically, and the media player will be at the bottom of the screen.</string>
-    <string name="popup_menu_text2">2. When you open the app list with all your playlist appears below. If you don\'t have any play list, a message will appear telling you to add songs by tapping the fab + button. when you do so, a new activity opens to add songs. In this new activity you can scan your device for media files, or you can visit various online music stores to by new songs.</string>
-    <string name="popup_menu_text3">3. When you open the app list with all your songs appears below. If you don\'t have any play list, a message will appear telling you to add songs by tapping the fab + button. when you do so, a new activity opens to add songs. In this new activity you can scan your device for media files, or you can visit various online music stores to by new songs.</string>
-    <string name="popup_menu_text4">4. When you open the app list with all your songs appears below. If you don\'t have any play list, a message will appear telling you to add songs by tapping the fab + button. when you do so, a new activity opens to add songs. In this new activity you can scan your device for media files, or you can visit various online music stores to by new songs.</string>
-    <string name="popup_menu_text5">5. When you open the app list with all your songs appears below. If you don\'t have any songs, a message will appear telling you to add songs by tapping the fab + button. when you do so, a new activity opens to add songs. In this new activity you can scan your device for media files, or you can visit various online music stores to by new songs.</string>
+    <string name="popup_menu_text0">This is the Main Menu. On this page, the user will be able to click a button of their choice upon which an explicit intent is triggered to the correct screen.\n\nThe user will be able to navigate from one screen to another on scrollable page menu, not just from Main Menu.</string>
+    <string name="popup_menu_text1">When the user clicks on Now Playing button in the Main Menu, the activity will open via an explicit intent and the song will start playing. \n\nThe artist name, image, and song title will change automatically, and the media player will be at the bottom of the screen.</string>
+    <string name="popup_menu_text2">When you open the app list with all your playlist appears below. \n\nIf you don\'t have any play list, a message will appear telling you to add songs by tapping the fab + button. When you do so, a new activity opens to add songs. In this new activity you can scan your device for media files, or you can visit various online music stores to by new songs.</string>
+    <string name="popup_menu_text3">When you open the Albums list with all your albums appears below. \n\nIf you don\'t have any album on the list, a message will appear telling you to add albums by tapping the fab + button. When you do so, a new activity opens to add albums. In this new activity you can scan your device for media files, or you can visit various online music stores to by new albums.</string>
+    <string name="popup_menu_text4">When you open the Songs list with all your songs appears below. \n\nIf you don\'t have any songs on the list, a message will appear telling you to add albums by tapping the fab + button. When you do so, a new activity opens to add songs. In this new activity you can scan your device for media files, or you can visit various online music stores to by new songs.</string>
+    <string name="popup_menu_text5">When you open the Artist list with all artits appears below from your songs and albums.\n\n If you don\'t have any artist on the list, you did not add any album or song to the music appilcation.</string>
 
     <string name="playlistheader1">Id</string>
     <string name="playlistheader2">List name</string>
+    <string name="albumslistheader2">Album </string>
+    <string name="songslistheader2">Song</string>
+
+    <string name="artist1_text">Singer, songwriter, actor, record producer\n\nBorn: 8 May 1975, Madrid, Spain. Residence: Miami, United States\n\nGenres: Pop Latin, pop, dance-pop, reggaeton, pop rock\n\nWebsite: enriqueiglesias.com</string>
+    <string name="artist2_text">Singer, songwriter\n\nBorn: 9 January 1991, Barcelona, Spain. Residence: Barcelona, Spain\n\nGenres: Latin pop\n\nWebsite: alvarosoler.com</string>
+    <string name="artist3_text">Rapper, Singer, record producer\n\nBorn: 19 December 1978, Cayey, Puerto Rico.\n\nGenres:Reggaeton, electropop, Latin pop\n\nWebsite: elsobreviviente.com</string>
 
 </resources>

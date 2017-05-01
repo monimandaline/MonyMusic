@@ -2,279 +2,132 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
     android:orientation="vertical"
-    android:background="@drawable/monymusicback"
-    android:scaleType="fitXY"
-    android:fitsSystemWindows="true">
     tools:context="com.example.android.monymusic.MainActivity">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/colorPrimaryDark"
         android:orientation="vertical">
 
-        <ImageView
-            android:src="@drawable/monymusiclogo"
-            android:scaleType="center"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp"
-            android:layout_width="wrap_content"
+        <ImageView style="@style/guitar_background" />
+
+        <ScrollView
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:scaleX ="1"
-            android:scaleY ="1"
-            android:adjustViewBounds="true"
-            />
+            android:nestedScrollingEnabled="true">
 
-    <LinearLayout
-        android:id="@+id/menu1"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="8dp"
-        android:paddingTop="8dp"
-        android:paddingBottom="8dp"
-        android:orientation="horizontal"
-        android:background="#AAFDFED6">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
-        <ImageView
-            android:src="@drawable/menu1"
-            android:scaleType="center"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp"
+                <ImageView
+                    style="@style/main_menu_icon"
+                    android:src="@drawable/monymusiclogo" />
 
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:scaleX ="1"
-            android:scaleY ="1"
-            android:adjustViewBounds="true"
-            />
+                <LinearLayout
+                    android:id="@+id/menu1"
+                    style="@style/main_menu_layout"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/color1">
 
-    <TextView
-        android:id="@+id/menu1_textview"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="left"
-        android:keepScreenOn="true"
-        android:text="@string/menu1"
-        android:textColor="#FFFFFF"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:paddingTop="8sp"/>
+                    <ImageView
+                        style="@style/main_menu_icon"
+                        android:src="@drawable/menu1" />
 
-    </LinearLayout>
+                    <TextView
+                        android:id="@+id/menu1_textview"
+                        style="@style/main_menu_txt"
+                        android:text="@string/menu1" />
 
-    <LinearLayout
-        android:id="@+id/menu2"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="8dp"
-        android:paddingTop="8dp"
-        android:paddingBottom="8dp"
-        android:orientation="horizontal"
-        android:background="#AAFDE756">
+                </LinearLayout>
 
-        <ImageView
-            android:src="@drawable/menu2"
-            android:scaleType="center"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:scaleX ="1"
-            android:scaleY ="1"
-            android:adjustViewBounds="true"
-            />
+                <LinearLayout
+                    android:id="@+id/menu2"
+                    style="@style/main_menu_layout"
+                    android:background="@color/color2">
 
-        <TextView
-            android:id="@+id/menu2_textview"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="left"
-            android:keepScreenOn="true"
-            android:text="@string/menu2"
-            android:textColor="#FFFFFF"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:paddingTop="8sp"/>
+                    <ImageView
+                        style="@style/main_menu_icon"
+                        android:src="@drawable/menu2" />
 
-    </LinearLayout>
+                    <TextView
+                        android:id="@+id/menu2_textview"
+                        style="@style/main_menu_txt"
+                        android:text="@string/menu2" />
 
-        <LinearLayout
-            android:layout_height="wrap_content"
-            android:id="@+id/menu3"
-            android:layout_width="match_parent"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="8dp"
-            android:paddingTop="8dp"
-            android:paddingBottom="8dp"
-            android:orientation="horizontal"
-            android:background="#AAFCA483">
+                </LinearLayout>
 
-            <ImageView
-                android:src="@drawable/menu3"
-                android:scaleType="center"
-                android:paddingLeft="20dp"
-                android:paddingRight="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:scaleX ="1"
-                android:scaleY ="1"
-                android:adjustViewBounds="true"
-                />
+                <LinearLayout
+                    android:id="@+id/menu3"
+                    style="@style/main_menu_layout"
+                    android:background="@color/color3">
 
-            <TextView
-                android:id="@+id/menu3_textview"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="left"
-                android:keepScreenOn="true"
-                android:text="@string/menu3"
-                android:textColor="#FFFFFF"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:paddingTop="8sp"/>
+                    <ImageView
+                        style="@style/main_menu_icon"
+                        android:src="@drawable/menu3" />
 
-        </LinearLayout>
+                    <TextView
+                        android:id="@+id/menu3_textview"
+                        style="@style/main_menu_txt"
+                        android:text="@string/menu3" />
 
-        <LinearLayout
-            android:layout_height="wrap_content"
-            android:id="@+id/menu4"
-            android:layout_width="match_parent"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="8dp"
-            android:paddingTop="8dp"
-            android:paddingBottom="8dp"
-            android:orientation="horizontal"
-            android:background="#AAF9648D">
+                </LinearLayout>
 
-            <ImageView
-                android:src="@drawable/menu4"
-                android:scaleType="center"
-                android:paddingLeft="20dp"
-                android:paddingRight="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:scaleX ="1"
-                android:scaleY ="1"
-                android:adjustViewBounds="true"
-                />
+                <LinearLayout
+                    android:id="@+id/menu4"
+                    style="@style/main_menu_layout"
+                    android:background="@color/color4">
 
-            <TextView
-                android:id="@+id/menu4_textview"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="left"
-                android:keepScreenOn="true"
-                android:text="@string/menu4"
-                android:textColor="#FFFFFF"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:paddingTop="8sp"/>
+                    <ImageView
+                        style="@style/main_menu_icon"
+                        android:src="@drawable/menu4" />
 
-        </LinearLayout>
+                    <TextView
+                        android:id="@+id/menu4_textview"
+                        style="@style/main_menu_txt"
+                        android:text="@string/menu4" />
 
-        <LinearLayout
-            android:layout_height="wrap_content"
-            android:id="@+id/menu5"
-            android:layout_width="match_parent"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="8dp"
-            android:paddingTop="8dp"
-            android:paddingBottom="8dp"
-            android:orientation="horizontal"
-            android:background="#AAFD535A">
+                </LinearLayout>
 
-            <ImageView
-                android:src="@drawable/menu5"
-                android:scaleType="center"
-                android:paddingLeft="20dp"
-                android:paddingRight="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:scaleX ="1"
-                android:scaleY ="1"
-                android:adjustViewBounds="true"
-                />
+                <LinearLayout
+                    android:id="@+id/menu5"
+                    style="@style/main_menu_layout"
+                    android:background="@color/color5">
 
-            <TextView
-                android:id="@+id/menu5_textview"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="left"
-                android:keepScreenOn="true"
-                android:text="@string/menu5"
-                android:textColor="#FFFFFF"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:paddingTop="8sp"/>
+                    <ImageView
+                        style="@style/main_menu_icon"
+                        android:src="@drawable/menu5" />
 
-        </LinearLayout>
-        <LinearLayout
-            android:layout_height="wrap_content"
-            android:id="@+id/menu6"
-            android:layout_width="match_parent"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="8dp"
-            android:paddingTop="8dp"
-            android:paddingBottom="8dp"
-            android:orientation="horizontal"
-            android:background="#AAFF213F">
+                    <TextView
+                        android:id="@+id/menu5_textview"
+                        style="@style/main_menu_txt"
+                        android:text="@string/menu5" />
 
-            <ImageView
-                android:src="@drawable/menu6"
-                android:scaleType="center"
-                android:paddingLeft="20dp"
-                android:paddingRight="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:scaleX ="1"
-                android:scaleY ="1"
-                android:adjustViewBounds="true"
-                />
+                </LinearLayout>
 
-            <TextView
-                android:id="@+id/menu6_textview"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="left"
-                android:keepScreenOn="true"
-                android:text="@string/menu6"
-                android:textColor="#FFFFFF"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:paddingTop="8sp"/>
+                <LinearLayout
+                    android:id="@+id/menu6"
+                    style="@style/main_menu_layout"
+                    android:background="@color/color6">
 
-        </LinearLayout>
+                    <ImageView
+                        style="@style/main_menu_icon"
+                        android:src="@drawable/menu6" />
 
-    <!-- This FrameLayout insets its children based on system windows using
-         android:fitsSystemWindows.
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:fitsSystemWindows="true">
+                    <TextView
+                        android:id="@+id/menu6_textview"
+                        style="@style/main_menu_txt"
+                        android:text="@string/menu6" />
 
-        <LinearLayout
-            android:id="@+id/fullscreen_content_controls"
-            style="?metaButtonBarStyle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|center_horizontal"
-            android:background="@color/black_overlay"
-            android:orientation="horizontal"
-            tools:ignore="UselessParent">
+                </LinearLayout>
 
-            <Button
-                android:id="@+id/dummy_button"
-                style="?metaButtonBarButtonStyle"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/dummy_button" />
+            </LinearLayout>
+        </ScrollView>
 
-        </LinearLayout>
-    </FrameLayout>-->
-</LinearLayout>
+    </RelativeLayout>
 
 </FrameLayout>
