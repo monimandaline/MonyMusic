@@ -85,12 +85,6 @@
                 android:textSize="18sp" />
         </LinearLayout>
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@drawable/textlines"
-            android:text="" />
-
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -115,32 +109,40 @@
         >
 
         <ImageView
+            android:id="@+id/player_button1"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="50dp"
             android:adjustViewBounds="true"
             android:scaleType="center"
+            android:onClick="PlayerButtons"
             android:src="@drawable/btn_stp" />
         <ImageView
+            android:id="@+id/player_button2"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="50dp"
             android:adjustViewBounds="true"
             android:scaleType="center"
+            android:onClick="PlayerButtons"
             android:src="@drawable/btn_bw" />
         <ImageView
+            android:id="@+id/player_button3"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="50dp"
             android:adjustViewBounds="true"
             android:scaleType="center"
+            android:onClick="PlayerButtons"
             android:src="@drawable/btn_play" />
         <ImageView
+            android:id="@+id/player_button4"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="50dp"
             android:adjustViewBounds="true"
             android:scaleType="center"
+            android:onClick="PlayerButtons"
             android:src="@drawable/btn_frw" />
     </LinearLayout>
 
