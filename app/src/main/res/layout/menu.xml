@@ -45,4 +45,5 @@
         style="@style/horizontal_menu_item"
         android:onClick="ScrollMenu"
         android:text="@string/menu6" />
+
 </LinearLayout>

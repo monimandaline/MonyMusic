@@ -26,7 +26,7 @@
         <item name="android:textColor">@color/color_text_white</item>
         <item name="android:background">@color/colorPrimary</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:gravity">center_vertical|center_horizontal</item>
         <item name="android:paddingTop">8dp</item>
         <item name="android:paddingBottom">8dp</item>
@@ -34,9 +34,8 @@
         <item name="android:paddingRight">64dp</item>
         <item name="android:textSize">@dimen/activity_text_size</item>
         <item name="android:layout_marginTop">32dp</item>
-        <item name="android:layout_marginBottom">48dp</item>
-        <item name="android:layout_marginLeft">64dp</item>
-        <item name="android:layout_marginRight">64dp</item>
+        <item name="android:layout_marginRight">16dp</item>
+        <item name="android:layout_marginLeft">16dp</item>
     </style>
 
     <style name="button_add">
@@ -162,7 +161,7 @@
         <item name="android:width">50dip</item>
         <item name="android:textColor">@color/color_text_white</item>
         <item name="android:background">@color/color4</item>
-        <item name="android:padding">@dimen/pad_normal</item>
+        <item name="android:padding">@dimen/pad_mini</item>
         <item name="android:gravity">center</item>
     </style>
 
@@ -205,7 +204,7 @@
         <item name="android:keepScreenOn">true</item>
         <item name="android:padding">@dimen/pad_mini</item>
         <item name="android:textColor">@color/color_text_white</item>
-        <item name="android:textSize">@dimen/activity_text_size_normal</item>
+        <item name="android:textSize">@dimen/activity_text_size_mini</item>
         <item name="android:layout_marginRight">16dp</item>
     </style>
 

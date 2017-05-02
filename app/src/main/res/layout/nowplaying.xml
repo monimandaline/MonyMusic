@@ -13,6 +13,7 @@
         <HorizontalScrollView
             style="@style/horizontal_menu">
             <include
+                android:id="@+id/menu"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 layout="@layout/menu" />

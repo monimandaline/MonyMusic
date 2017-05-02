@@ -64,7 +64,10 @@
         </activity>
 
         <activity android:name=".Pop" android:theme="@style/AppTheme.CustomTheme">
-
         </activity>
+
+        <activity android:name=".MyMenu">
+        </activity>
+
     </application>
 </manifest>

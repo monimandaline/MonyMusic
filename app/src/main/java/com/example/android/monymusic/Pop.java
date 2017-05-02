@@ -24,7 +24,7 @@ public class Pop extends Activity {
         int width = dm.widthPixels;
         int height = dm.heightPixels;
 
-        getWindow().setLayout((int)(width*.8),(int)(height*.8));
+        getWindow().setLayout((int)(width*.9),(int)(height*.8));
 
         // The title of screen
         TextView  popup_label = (TextView) findViewById(R.id.popup_label);
