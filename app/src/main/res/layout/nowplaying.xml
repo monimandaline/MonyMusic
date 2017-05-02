@@ -6,103 +6,16 @@
     android:orientation="vertical">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent">
 
         <HorizontalScrollView
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="left"
-            android:nestedScrollingEnabled="true"
-            android:orientation="horizontal"
-            android:background="#AAFDFED6">
-
-            <LinearLayout
-                android:layout_width="wrap_content"
+            style="@style/horizontal_menu">
+            <include
+                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:id="@+id/scroll_menu0"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="left"
-                    android:keepScreenOn="true"
-                    android:padding="8dp"
-                    android:text="@string/menuhome"
-                    android:textColor="#FFFFFF"
-                    android:textSize="14sp"
-                    android:onClick="ScrollMenu"/>
-
-                <TextView
-                    android:id="@+id/scroll_menu1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="left"
-                    android:keepScreenOn="true"
-                    android:padding="8dp"
-                    android:text="@string/menu1"
-                    android:textColor="#FFFFFF"
-                    android:textStyle="bold"
-                    android:textSize="15sp"/>
-
-                <TextView
-                    android:id="@+id/scroll_menu2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:keepScreenOn="true"
-                    android:padding="8dp"
-                    android:text="@string/menu2"
-                    android:textColor="#FFFFFF"
-                    android:textSize="14sp"
-                    android:onClick="ScrollMenu"/>
-
-                <TextView
-                    android:id="@+id/scroll_menu3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:keepScreenOn="true"
-                    android:padding="8dp"
-                    android:text="@string/menu3"
-                    android:textColor="#FFFFFF"
-                    android:textSize="14sp"
-                    android:onClick="ScrollMenu"/>
-
-                <TextView
-                    android:id="@+id/scroll_menu4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:keepScreenOn="true"
-                    android:padding="8dp"
-                    android:text="@string/menu4"
-                    android:textColor="#FFFFFF"
-                    android:textSize="14sp"
-                    android:onClick="ScrollMenu"/>
-
-                <TextView
-                    android:id="@+id/scroll_menu5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:keepScreenOn="true"
-                    android:padding="8dp"
-                    android:text="@string/menu5"
-                    android:textColor="#FFFFFF"
-                    android:textSize="14sp"
-                    android:onClick="ScrollMenu"/>
-                <TextView
-                    android:id="@+id/scroll_menu6"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:keepScreenOn="true"
-                    android:padding="8dp"
-                    android:text="@string/menu6"
-                    android:textColor="#FFFFFF"
-                    android:textSize="14sp"
-                    android:onClick="ScrollMenu"/>
-            </LinearLayout>
+                layout="@layout/menu" />
         </HorizontalScrollView>
 
         <LinearLayout
