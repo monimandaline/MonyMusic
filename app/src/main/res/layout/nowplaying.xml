@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#770031"
+    android:background="@color/colorPrimaryDark"
     android:orientation="vertical">
 
     <LinearLayout
@@ -22,128 +22,71 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#AAF58B69"
+            android:background="@color/color7"
             android:orientation="vertical">
 
             <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-
                 >
 
                 <TextView
                     android:id="@+id/artist_textview"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="left"
-                    android:keepScreenOn="true"
-                    android:paddingLeft="8dp"
-                    android:paddingTop="8dp"
-                    android:text="Enrique Iglesias"
-                    android:textColor="#FFFFFF"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+                    style="@style/play_text"
+                    android:text="Enrique Iglesias"/>
 
                 <TextView
                     android:id="@+id/time_textview"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="right"
-                    android:keepScreenOn="true"
-                    android:paddingRight="16dp"
-                    android:paddingTop="8dp"
                     android:text="03:39"
-                    android:textColor="#FFFFFF"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+                    style="@style/play_text2"
+
+                    />
             </LinearLayout>
 
             <TextView
                 android:id="@+id/album_textview"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="left"
-                android:keepScreenOn="true"
-                android:paddingLeft="8dp"
-                android:paddingTop="8dp"
                 android:text="Euphoria Reloaded"
-                android:textColor="#FFFFFF"
-                android:textSize="18sp" />
+                style="@style/play_text3"
+ />
 
             <TextView
                 android:id="@+id/song_textview"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="left"
-                android:keepScreenOn="true"
-                android:paddingBottom="8dp"
-                android:paddingLeft="8dp"
-                android:paddingTop="8dp"
                 android:text="I like how it feels"
-                android:textColor="#FFFFFF"
-                android:textSize="18sp" />
+                style="@style/play_text3"
+  />
         </LinearLayout>
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:maxWidth="600dp"
-            android:maxHeight="600dp"
-            android:layout_gravity="center_horizontal|bottom"
-            android:adjustViewBounds="true"
-            android:scaleType="centerCrop"
+            style="@style/play_img"
             android:src="@drawable/albumcover1" />
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#AAF58B69"
-        android:orientation="horizontal"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:paddingTop="20dp"
-        android:paddingBottom="20dp"
+        style="@style/play_player"
         >
 
-        <ImageView
+        <ImageButton
             android:id="@+id/player_button1"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="50dp"
-            android:adjustViewBounds="true"
-            android:scaleType="center"
-            android:onClick="PlayerButtons"
-            android:src="@drawable/btn_stp" />
-        <ImageView
-            android:id="@+id/player_button2"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="50dp"
-            android:adjustViewBounds="true"
-            android:scaleType="center"
-            android:onClick="PlayerButtons"
-            android:src="@drawable/btn_bw" />
-        <ImageView
+            style="@style/play_player_btn"
+            android:src="@drawable/btn_stp">
+        </ImageButton>
+        <ImageButton
+           android:id="@+id/player_button2"
+            style="@style/play_player_btn"
+            android:src="@drawable/btn_bw">
+        </ImageButton>
+        <ImageButton
             android:id="@+id/player_button3"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="50dp"
-            android:adjustViewBounds="true"
-            android:scaleType="center"
-            android:onClick="PlayerButtons"
-            android:src="@drawable/btn_play" />
-        <ImageView
+            style="@style/play_player_btn"
+            android:src="@drawable/btn_play">
+        </ImageButton>
+        <ImageButton
             android:id="@+id/player_button4"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="50dp"
-            android:adjustViewBounds="true"
-            android:scaleType="center"
-            android:onClick="PlayerButtons"
-            android:src="@drawable/btn_frw" />
+            style="@style/play_player_btn"
+            android:src="@drawable/btn_frw">
+        </ImageButton>
+
     </LinearLayout>
 
 

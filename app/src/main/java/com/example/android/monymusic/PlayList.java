@@ -15,6 +15,7 @@ import android.view.animation.AnimationSet;
 import android.view.animation.AnimationUtils;
 import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 
@@ -26,15 +27,20 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import static com.example.android.monymusic.R.id.listview;
+import static com.example.android.monymusic.R.id.menu1_textview;
+import static com.example.android.monymusic.R.id.menu2_textview;
+import static com.example.android.monymusic.R.id.menu3_textview;
+import static com.example.android.monymusic.R.id.menu4_textview;
+import static com.example.android.monymusic.R.id.menu5_textview;
 
-public class PlayList extends AppCompatActivity {
+public class PlayList extends AppCompatActivity implements View.OnClickListener{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Log.v("PlayList", "click");
 
         // Global variable for Help popup window, where you can find a description for actual screen
-        // The menu number allows for Pop.java code to select the correct text
+        // The menu number allows for PopActivity.java code to select the correct text
         MainActivity.menu = 2;
 
         setContentView(R.layout.playlist);
@@ -80,6 +86,26 @@ public class PlayList extends AppCompatActivity {
 
         });
 
+        TextView menu0_textview = (TextView) findViewById(R.id.scroll_menu0);
+        TextView menu1_textview = (TextView) findViewById(R.id.scroll_menu1);
+        TextView menu2_textview = (TextView) findViewById(R.id.scroll_menu2);
+        TextView menu3_textview = (TextView) findViewById(R.id.scroll_menu3);
+        TextView menu4_textview = (TextView) findViewById(R.id.scroll_menu4);
+        TextView menu5_textview = (TextView) findViewById(R.id.scroll_menu5);
+        TextView menu6_textview = (TextView) findViewById(R.id.scroll_menu6);
+
+        menu0_textview.setOnClickListener(this);
+        menu1_textview.setOnClickListener(this);
+        menu2_textview.setOnClickListener(this);
+        menu3_textview.setOnClickListener(this);
+        menu4_textview.setOnClickListener(this);
+        menu5_textview.setOnClickListener(this);
+        menu6_textview.setOnClickListener(this);
+
+        Button addButton = (Button) findViewById(R.id.button_add);
+
+        addButton.setOnClickListener(this);
+        //addButton.bringToFront();
     }
 
     public void onResume() {
@@ -100,29 +126,26 @@ public class PlayList extends AppCompatActivity {
         menu6_textview.setTextColor(Color.parseColor("#FFFFFF"));
 
         // Global variable for Help popup window, where you can find a description for actual screen
-        // The menu number allows for Pop.java code to select the correct text
+        // The menu number allows for PopActivity.java code to select the correct text
         MainActivity.menu = 2;
     }
 
-    // Header menu heandler
-    public void ScrollMenu(View v) {
-        MyMenu NewMyMenu = new MyMenu();
-        NewMyMenu.MenuHandler(v);
-    }
 
-    public void addList(View v) {
-        // This code runs, when the user push the add button
-        Button addButton = (Button) findViewById(R.id.button_add);
-        addButton.setOnClickListener(new View.OnClickListener() {
-                                        @Override
-                                        public void onClick(View v) {
-                                            ButtonAnimation(v);
-                                            Toast.makeText(PlayList.this, "Ohhoho, you clicked on add button!", Toast.LENGTH_LONG).show();
-                                        }
-                                    });
+    @Override
+    public void onClick(View v) {
+        // This code works, when the user push the add button
+        int getid = v.getId();
+        if (getid == R.id.button_add)
+        {  ButtonAnimation(v);
+            Toast.makeText(PlayList.this, "Ohhoho, you clicked on add button!", Toast.LENGTH_LONG).show();
+        }
+        else {
+            // Header menu heandler
+            MyMenu NewMyMenu = new MyMenu();
+            NewMyMenu.MenuHandler(v);
+        }
 
     }
-
 
     // Button animations
     public void ButtonAnimation(View v) {

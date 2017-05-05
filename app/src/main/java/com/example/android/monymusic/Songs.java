@@ -27,14 +27,14 @@ import android.widget.Toast;
 
 import static com.example.android.monymusic.R.id.listview;
 
-public class Songs extends AppCompatActivity {
+public class Songs extends AppCompatActivity implements View.OnClickListener  {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Log.v("Songs", "click");
 
         // Global variable for Help popup window, where you can find a description for actual screen
-        // The menu number allows for Pop.java code to select the correct text
+        // The menu number allows for PopActivity.java code to select the correct text
         MainActivity.menu = 4;
 
         setContentView(R.layout.songs);
@@ -83,6 +83,25 @@ public class Songs extends AppCompatActivity {
 
         });
 
+        TextView menu0_textview = (TextView) findViewById(R.id.scroll_menu0);
+        TextView menu1_textview = (TextView) findViewById(R.id.scroll_menu1);
+        TextView menu2_textview = (TextView) findViewById(R.id.scroll_menu2);
+        TextView menu3_textview = (TextView) findViewById(R.id.scroll_menu3);
+        TextView menu4_textview = (TextView) findViewById(R.id.scroll_menu4);
+        TextView menu5_textview = (TextView) findViewById(R.id.scroll_menu5);
+        TextView menu6_textview = (TextView) findViewById(R.id.scroll_menu6);
+
+        menu0_textview.setOnClickListener(this);
+        menu1_textview.setOnClickListener(this);
+        menu2_textview.setOnClickListener(this);
+        menu3_textview.setOnClickListener(this);
+        menu4_textview.setOnClickListener(this);
+        menu5_textview.setOnClickListener(this);
+        menu6_textview.setOnClickListener(this);
+
+        Button addButton = (Button) findViewById(R.id.button_add);
+        addButton.setOnClickListener(this);
+
     }
 
     public void onResume() {
@@ -103,14 +122,23 @@ public class Songs extends AppCompatActivity {
         menu6_textview.setTextColor(Color.parseColor("#FFFFFF"));
 
         // Global variable for Help popup window, where you can find a description for actual screen
-        // The menu number allows for Pop.java code to select the correct text
+        // The menu number allows for PopActivity.java code to select the correct text
         MainActivity.menu = 4;
     }
 
-    // Header menu heandler
-    public void ScrollMenu(View v) {
+    @Override
+    public void onClick(View v) {
+        // Header menu heandler
         MyMenu NewMyMenu = new MyMenu();
         NewMyMenu.MenuHandler(v);
+
+        // This code works, when the user push the add button
+        int getid = v.getId();
+        if (getid == R.id.button_add)
+        {  ButtonAnimation(v);
+            Toast.makeText(Songs.this, "Ohhoho, you clicked on add button!", Toast.LENGTH_LONG).show();
+        }
+
     }
 
     public void addList(View v) {

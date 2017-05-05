@@ -28,8 +28,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         setContentView(R.layout.activity_main);
 
-        //startActivity(new Intent(MainActivity.this, Pop.class));
-
         final Typeface typeface=Typeface.createFromAsset(getAssets(),"fonts/Montserrat-Regular.ttf");
 
         // setup the onclick to the textviews
@@ -91,7 +89,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(MonyMusic);
                 break;
             case R.id.menu6:
-                startActivity(new Intent(MainActivity.this, Pop.class));
+                startActivity(new Intent(MainActivity.this, PopActivity.class));
                 break;
             default:
                 break;
@@ -102,23 +100,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         super.onResume();
         MainActivity.menu = 0;
-    }
-
-
-    //** Button animations
-    public void ButtonAnimation(View v) {
-
-        final Animation animTranslate = AnimationUtils.loadAnimation(this, R.anim.anim_translate);
-        final Animation animAlpha = AnimationUtils.loadAnimation(this, R.anim.anim_alpha);
-        final Animation animScale = AnimationUtils.loadAnimation(this, R.anim.anim_scale);
-        final Animation animRotate = AnimationUtils.loadAnimation(this, R.anim.anim_rotate);
-
-        AnimationSet sets = new AnimationSet(false);
-        //sets.addAnimation(animTranslate);
-        //sets.addAnimation(animAlpha);
-        sets.addAnimation(animRotate);
-        //sets.addAnimation(animScale);
-        v.startAnimation(sets);
     }
 
 }

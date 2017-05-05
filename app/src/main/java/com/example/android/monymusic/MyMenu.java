@@ -68,7 +68,7 @@ public class MyMenu extends AppCompatActivity  {
                 break;
             case R.id.scroll_menu6:
                 menu6_textview.setTextColor(Color.parseColor("#66000000"));
-                MonyMusic = new Intent(v.getContext(), Pop.class);
+                MonyMusic = new Intent(v.getContext(), PopActivity.class);
                 v.getContext().startActivity(MonyMusic);
                 menu6_textview.setTextColor(Color.parseColor("#000000"));
                 break;

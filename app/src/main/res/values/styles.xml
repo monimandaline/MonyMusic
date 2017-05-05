@@ -244,6 +244,72 @@
         <item name="android:gravity">fill_horizontal</item>
         <item name="android:background">@color/color2</item>
         <item name="android:layout_below">@id/popup_label</item>
-
     </style>
+
+    <style name="play_text">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">left</item>
+        <item name="android:keepScreenOn">true</item>
+        <item name="android:paddingLeft">@dimen/pad_mini</item>
+        <item name="android:paddingTop">@dimen/pad_mini</item>
+        <item name="android:textColor">@color/color_text_white</item>
+        <item name="android:textSize">@dimen/activity_text_size</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="play_text2">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">right</item>
+        <item name="android:keepScreenOn">true</item>
+        <item name="android:paddingRight">@dimen/pad_normal</item>
+        <item name="android:paddingTop">@dimen/pad_mini</item>
+        <item name="android:textColor">@color/color_text_white</item>
+        <item name="android:textSize">@dimen/activity_text_size</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="play_text3">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">left</item>
+        <item name="android:keepScreenOn">true</item>
+        <item name="android:paddingLeft">@dimen/pad_mini</item>
+        <item name="android:paddingTop">@dimen/pad_mini</item>
+        <item name="android:textColor">@color/color_text_white</item>
+        <item name="android:textSize">@dimen/activity_text_size</item>
+    </style>
+
+    <style name="play_img">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:maxWidth">600dp</item>
+        <item name="android:maxHeight">600dp</item>
+        <item name="android:layout_gravity">center_horizontal|bottom</item>
+        <item name="android:adjustViewBounds">true</item>
+        <item name="android:scaleType">centerCrop</item>
+    </style>
+
+    <style name="play_player">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@color/color7</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:layout_alignParentStart">true</item>
+        <item name="android:paddingTop">@dimen/pad_big</item>
+        <item name="android:paddingBottom">@dimen/pad_big</item>
+    </style>
+
+    <style name="play_player_btn">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:adjustViewBounds">true</item>
+        <item name="android:scaleType">center</item>
+        <item name="android:background">@null</item>
+    </style>
+
 </resources>

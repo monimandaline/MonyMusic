@@ -4,7 +4,8 @@
     android:orientation="vertical"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
-    android:background="@color/colorPrimaryDark">
+    android:background="@color/colorPrimaryDark"
+    android:focusableInTouchMode="true">
 
         <ImageView style="@style/guitar_background" />
 
@@ -50,11 +51,12 @@
                         </ListView>
                 </LinearLayout>
         </LinearLayout>
+
         <Button
             style="@style/button_add"
             android:text="+"
-            android:id="@+id/button_add"
-            android:onClick="addList"/>
+            android:id="@+id/button_add"/>
+
 
 </RelativeLayout>
 

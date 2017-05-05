@@ -27,17 +27,32 @@ import java.util.List;
 import static com.example.android.monymusic.R.id.listview;
 
 
-public class Artists extends AppCompatActivity {
+public class Artists extends AppCompatActivity  implements View.OnClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         // Global variable for Help popup window, where you can find a description for actual screen
-        // The menu number allows for Pop.java code to select the correct text
+        // The menu number allows for PopActivity.java code to select the correct text
         MainActivity.menu = 5;
 
         setContentView(R.layout.artists);
 
+        TextView menu0_textview = (TextView) findViewById(R.id.scroll_menu0);
+        TextView menu1_textview = (TextView) findViewById(R.id.scroll_menu1);
+        TextView menu2_textview = (TextView) findViewById(R.id.scroll_menu2);
+        TextView menu3_textview = (TextView) findViewById(R.id.scroll_menu3);
+        TextView menu4_textview = (TextView) findViewById(R.id.scroll_menu4);
+        TextView menu5_textview = (TextView) findViewById(R.id.scroll_menu5);
+        TextView menu6_textview = (TextView) findViewById(R.id.scroll_menu6);
+
+        menu0_textview.setOnClickListener(this);
+        menu1_textview.setOnClickListener(this);
+        menu2_textview.setOnClickListener(this);
+        menu3_textview.setOnClickListener(this);
+        menu4_textview.setOnClickListener(this);
+        menu5_textview.setOnClickListener(this);
+        menu6_textview.setOnClickListener(this);
     }
 
     public void onResume() {
@@ -58,14 +73,14 @@ public class Artists extends AppCompatActivity {
         menu6_textview.setTextColor(Color.parseColor("#FFFFFF"));
 
         // Global variable for Help popup window, where you can find a description for actual screen
-        // The menu number allows for Pop.java code to select the correct text
+        // The menu number allows for PopActivity.java code to select the correct text
         MainActivity.menu = 5;
     }
 
-    // Header menu heandler
-    public void ScrollMenu(View v) {
+    @Override
+    public void onClick(View v) {
+        // Header menu heandler
         MyMenu NewMyMenu = new MyMenu();
         NewMyMenu.MenuHandler(v);
     }
-
 }

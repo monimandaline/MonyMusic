@@ -15,6 +15,7 @@ import android.view.animation.AnimationSet;
 import android.view.animation.AnimationUtils;
 import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 
@@ -27,14 +28,14 @@ import android.widget.Toast;
 
 import static com.example.android.monymusic.R.id.listview;
 
-public class Albums extends AppCompatActivity {
+public class Albums extends AppCompatActivity implements View.OnClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         Log.v("Albums", "click");
         // Global variable for Help popup window, where you can find a description for actual screen
-        // The menu number allows for Pop.java code to select the correct text
+        // The menu number allows for PopActivity.java code to select the correct text
         MainActivity.menu = 3;
 
         setContentView(R.layout.albums);
@@ -79,6 +80,25 @@ public class Albums extends AppCompatActivity {
             }
 
         });
+
+        TextView menu0_textview = (TextView) findViewById(R.id.scroll_menu0);
+        TextView menu1_textview = (TextView) findViewById(R.id.scroll_menu1);
+        TextView menu2_textview = (TextView) findViewById(R.id.scroll_menu2);
+        TextView menu3_textview = (TextView) findViewById(R.id.scroll_menu3);
+        TextView menu4_textview = (TextView) findViewById(R.id.scroll_menu4);
+        TextView menu5_textview = (TextView) findViewById(R.id.scroll_menu5);
+        TextView menu6_textview = (TextView) findViewById(R.id.scroll_menu6);
+
+        menu0_textview.setOnClickListener(this);
+        menu1_textview.setOnClickListener(this);
+        menu2_textview.setOnClickListener(this);
+        menu3_textview.setOnClickListener(this);
+        menu4_textview.setOnClickListener(this);
+        menu5_textview.setOnClickListener(this);
+        menu6_textview.setOnClickListener(this);
+
+        Button addButton = (Button) findViewById(R.id.button_add);
+        addButton.setOnClickListener(this);
     }
 
     public void onResume() {
@@ -98,85 +118,27 @@ public class Albums extends AppCompatActivity {
         menu4_textview.setTextColor(Color.parseColor("#FFFFFF"));
         menu5_textview.setTextColor(Color.parseColor("#FFFFFF"));
         menu6_textview.setTextColor(Color.parseColor("#FFFFFF"));
+
         // Global variable for Help popup window, where you can find a description for actual screen
-        // The menu number allows for Pop.java code to select the correct text
+        // The menu number allows for PopActivity.java code to select the correct text
         MainActivity.menu = 3;
     }
 
-    public void ScrollMenu(View v) {
-        //This code manages the local menu on top of the screen
-        Intent MonyMusic;
-        TextView menu1_textview = (TextView) findViewById(R.id.scroll_menu1);
-        TextView menu2_textview = (TextView) findViewById(R.id.scroll_menu2);
-        TextView menu3_textview = (TextView) findViewById(R.id.scroll_menu3);
-        TextView menu4_textview = (TextView) findViewById(R.id.scroll_menu4);
-        TextView menu5_textview = (TextView) findViewById(R.id.scroll_menu5);
-        TextView menu6_textview = (TextView) findViewById(R.id.scroll_menu6);
-        // each click starts the proper intent
-        switch (v.getId()) {
-            case R.id.scroll_menu0:
-                Log.v("NowPlaying", "click 0");
-                menu1_textview.setTextColor(Color.parseColor("#66000000"));
-                MonyMusic = new Intent(this, MainActivity.class);
-                startActivity(MonyMusic);
-                menu1_textview.setTextColor(Color.parseColor("#000000"));
-                break;
-            case R.id.scroll_menu1:
-                Log.v("NowPlaying", "click 1");
-                menu1_textview.setTextColor(Color.parseColor("#66000000"));
-                MonyMusic = new Intent(this, NowPlaying.class);
-                startActivity(MonyMusic);
-                menu1_textview.setTextColor(Color.parseColor("#000000"));
-                break;
-            case R.id.scroll_menu2:
-                Log.v("NowPlaying", "click 2");
-                menu2_textview.setTextColor(Color.parseColor("#66000000"));
-                MonyMusic = new Intent(this, PlayList.class);
-                startActivity(MonyMusic);
-                menu2_textview.setTextColor(Color.parseColor("#000000"));
-                break;
-            case R.id.scroll_menu3:
-                Log.v("NowPlaying", "click 3");
-                menu3_textview.setTextColor(Color.parseColor("#66000000"));
-                MonyMusic = new Intent(this, Albums.class);
-                startActivity(MonyMusic);
-                menu3_textview.setTextColor(Color.parseColor("#000000"));
-                break;
-            case R.id.scroll_menu4:
-                Log.v("NowPlaying", "click 4");
-                menu4_textview.setTextColor(Color.parseColor("#66000000"));
-                MonyMusic = new Intent(this, Songs.class);
-                startActivity(MonyMusic);
-                menu4_textview.setTextColor(Color.parseColor("#000000"));
-                break;
-            case R.id.scroll_menu5:
-                Log.v("NowPlaying", "click 5");
-                menu5_textview.setTextColor(Color.parseColor("#66000000"));
-                MonyMusic = new Intent(this, Artists.class);
-                startActivity(MonyMusic);
-                menu5_textview.setTextColor(Color.parseColor("#000000"));
-                break;
-            case R.id.scroll_menu6:
-                startActivity(new Intent(Albums.this, Pop.class));
-                break;
-            default:
-                break;
-        }
-    }
 
-    public void addList(View v) {
+    @Override
+    public void onClick(View v) {
+        // Header menu heandler
+        MyMenu NewMyMenu = new MyMenu();
+        NewMyMenu.MenuHandler(v);
+
         // This code works, when the user push the add button
-        Button addButton = (Button) findViewById(R.id.button_add);
-        addButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ButtonAnimation(v);
-                Toast.makeText(Albums.this, "Ohhoho, you clicked on add button!", Toast.LENGTH_LONG).show();
-            }
-        });
+        int getid = v.getId();
+        if (getid == R.id.button_add)
+        {  ButtonAnimation(v);
+           Toast.makeText(Albums.this, "Ohhoho, you clicked on add button!", Toast.LENGTH_LONG).show();
+        }
 
     }
-
 
     // Button animations
     public void ButtonAnimation(View v) {

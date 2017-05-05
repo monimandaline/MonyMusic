@@ -9,7 +9,7 @@ import android.widget.TextView;
 /**
  * Created by Csontos Mónika on 2017. 04. 30.
  */
-public class Pop extends Activity {
+public class PopActivity extends Activity {
     // This activity handles the popup window on the screen. The popup is used from local menu's "Help" item and is used from Main menu's "Help" item.
     @Override
     protected void onCreate (Bundle savedInstanceState)
